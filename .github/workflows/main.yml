@@ -2,11 +2,7 @@ name: Deploy GCR
 on:
   workflow_dispatch:
   push:
-    branches:
-      - main
   pull_request:
-    branches:
-      - main
 env:
   PROJECT_ID: ${{ secrets.GLOBAL_PROJECT_ID }}
   RUN_REGION: ${{ secrets.GLOBAL_RUN_REGION }}
