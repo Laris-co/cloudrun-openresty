@@ -1,1 +1,1 @@
-# cloudrun-boilerplate
+# cloudrun-openresty
