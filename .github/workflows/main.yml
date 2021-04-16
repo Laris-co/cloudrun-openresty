@@ -32,5 +32,4 @@ jobs:
           --quiet \
           --region $RUN_REGION \
           --image gcr.io/$PROJECT_ID/$REPO_NAME:$GITHUB_RUN_NUMBER \
-          --platform managed \
-          --allow-unauthenticated
+          --platform managed
