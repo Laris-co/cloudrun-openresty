@@ -16,12 +16,11 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
       - uses: actions/checkout@v2
-      - uses: nelonoel/branch-name@v1.0.1
+      - run: echo $BRANCH_NAME          
       - uses: google-github-actions/setup-gcloud@master
         with:
           project_id: ${{ env.PROJECT_ID }}
           service_account_key: ${{ env.SA }}
-      - run: echo $BRANCH_NAME    
       - run: gcloud auth configure-docker
       - name: Local Build
         run: docker build -t "gcr.io/$PROJECT_ID/$REPO_NAME:${GITHUB_RUN_NUMBER}" .
